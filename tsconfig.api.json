@@ -3,10 +3,10 @@
   "compilerOptions": {
     "types": [
       "vite/client",
-      "node" 
-],
-    "moduleResolution": "node", // 确保模块解析模式正确
-    "skipLibCheck": true        // 建议加上，跳过库文件的类型检查，加快构建
+      "node"
+    ],
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "include": ["api", "src/generated", "server"]
 }

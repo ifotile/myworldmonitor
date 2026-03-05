@@ -1,7 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["vite/client"]
+    "types": [
+      "vite/client",
+      "node"  // 👈 必须增加这一行，让 TS 认识 process.env
+    ],
+    "moduleResolution": "node", // 确保模块解析模式正确
+    "skipLibCheck": true        // 建议加上，跳过库文件的类型检查，加快构建
   },
   "include": ["api", "src/generated", "server"]
 }
